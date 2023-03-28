@@ -1,0 +1,307 @@
+/*
+Theme Name: Puush Agency
+Theme URI: https://puushagency.com
+Description: Tema para el proyecto beta.
+Author: Sergi Navarro
+Author URI: https://serginavarroweb.com
+Version: 1.0
+*/
+
+
+* body {
+  margin: 0;
+  padding-top: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+}
+
+.main-landing {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+/*---Main buttons && Links ---*/
+.main-btn {
+  text-decoration: none;
+  color: #fff;
+  background-color: #143BB2;
+  border-radius: 3px;
+  padding: 10px 40px 10px 40px;
+  font-weight: 600;
+}
+
+.nav-link {
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  font-weight: 300;
+}
+
+.logo {
+  font-weight: 600;
+}
+
+/*---Padding 1em---*/
+.p-1 {
+  padding: 1em;
+}
+
+.pb-1 {
+  padding-bottom: 1em;
+}
+
+.pt-1 {
+  padding-top: 1em;
+}
+
+.aling-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*---Nav---*/
+.top-nav-container {
+  height: 60px;
+  padding-left: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.ul-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+@media (max-width: 570px) {
+  .ul-nav {
+    display: none;
+  }
+}
+/*---TITLES---*/
+.h1-landing {
+  margin: 0;
+  padding-bottom: 0.7em;
+}
+
+.h3-text {
+  font-weight: bold;
+  font-size: 0.7em;
+  padding-top: 40px;
+}
+
+.h3-service {
+  font-weight: bold;
+  font-size: 0.7em;
+}
+
+.orange {
+  font-size: 2em;
+  color: #F97135;
+}
+
+/*---- P- Text style---*/
+.text {
+  font-weight: 400;
+}
+
+p {
+  max-width: 250px;
+}
+
+/*--- Landing text---*/
+.text-landing-media {
+  max-width: 400px;
+  font-weight: 600;
+}
+
+.h3-landing {
+  font-weight: 900;
+}
+
+/*---Landing blur section---*/
+.landing-blur-container {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/*.blur-orange{
+
+    display: block;
+    margin-left: -2em;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: $detail-color;
+    filter: blur(20px);
+
+}
+
+.blur-blue{
+    margin-top: 20px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: $main-btn-color;
+    filter: blur(25px);
+
+}*/
+.arrow {
+  width: 50%;
+  position: absolute;
+  left: 4px;
+  margin-top: 40px;
+}
+
+.h3-blur {
+  padding-top: 0;
+}
+
+/*--- Services---*/
+.services-main-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/*--- Team --- */
+.team {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.team-cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1em;
+}
+
+.card {
+  border-radius: 3px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.img-container {
+  background-color: #F97135;
+  border-radius: 3px;
+  width: 100%;
+  height: 200px;
+}
+
+.ira {
+  background-image: url(/images/ira-removebg-preview.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.masha {
+  background-image: url(/images/Masha-removebg-preview.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sergi {
+  background-image: url(/images/IMG_8168-removebg-preview.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*---WHY US SECTION---*/
+.why-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+}
+
+.why-us {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-p {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.why-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 690px) {
+  .why-main {
+    flex-direction: column;
+  }
+}
+/*---Input Form---*/
+.form-container {
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-form {
+  background: none;
+  border: none;
+  border-bottom: 1px #143BB2 solid;
+  outline: none;
+}
+
+.message {
+  border: 1px #143BB2 solid;
+  border-radius: 3px;
+  height: 50px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.sumbit {
+  border: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+/*--- Media querys---*/
+@media (min-width: 570px) {
+  .text-landing-media {
+    max-width: 600px;
+  }
+}
+@media (min-width: 875px) {
+  .services-main-container {
+    height: 100vh;
+  }
+  .team {
+    height: 100vh;
+  }
+}/*# sourceMappingURL=style.css.map */
