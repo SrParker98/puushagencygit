@@ -1,0 +1,48 @@
+404.php----Se muestra cuando no existe la entrada o página solicitada
+
+archive.php-Muestra el archivo de una categoría, etiqueta, fecha, autor..
+
+comments.php---Muestra el contenido de una entrada o página.
+
+single.php----Muestra el contenido de una entrada.
+
+sidebar.php---  Incluye el contenido de la barra lateral del sitio.
+
+functions.php---Permite cambiar los comportamientos por defecto de WordPress.
+
+footer.php--pie de página.
+
+index.php---Contendrá el código de la página de inicio si elegimos 'Tus últimas entradas'
+como página frontal en los ajustes de lectura de WordPress.
+
+page.php--Muestra el contenido de las páginas.
+
+screenshot.png-- es la imagen de el tema
+
+header.php--es el encabezado del sitio.
+
+search.php--muestra los resultados de búsqueda.
+
+home.php---Contendrá el código de la página de entradas si elegimos 'Una página estática'
+como página de entradas en los ajustes de lectura de WordPress.
+
+front-page.php--Contendrá el código de la página de inicio si elegimos 'Una página estática'
+como página frontal en los ajustes de lectura de WordPress
+
+
+**bloginfo()
+Muestra información acerca del sitio, como su nombre, URL,
+descripción, rutas a archivos, carpetas, ajustes de WordPress
+y distintos datos relacionados con el perfil del administrador.
+
+<?php bloginfo ( 'name' ); // Título del sitio ?>
+<?php bloginfo ( 'description' ); // Descripción corta del sitio ?>
+<?php bloginfo ( 'url' ); // Ruta a la raíz del sitio ?>
+<?php bloginfo ( 'template_url' ); // Ruta a la carpeta del tema ?>
+<?php bloginfo ( 'stylesheet_url' ); // Ruta a la hoja de estilos ?>
+<?php bloginfo ( 'charset' ); // Codificación de caracteres ?>
+<?php bloginfo ( 'admin_email' ); // E-Mail del administrador ?>
+<?php $siteURL = get_bloginfo ( 'url' ); ?>
+ El título del sitio y su descripción corta se especifican en el apartado Ajustes generales del panel de administración.
+ El argumento 'charset' devuelve siempre el valor por defecto para la codificación de caracteres: UTF-8.
+ Utilizando get_bloginfo() podemos almacenar la información en una variable, en lugar de mostrarla en la página.

@@ -1,27 +1,28 @@
 $main-btn-color: #143BB2;
 $detail-color: #F97135;
 $text-btn-color: #fff;
-$font-montserrat:'Montserrat', sans-serif;
+$font-montserrat: 'Montserrat', sans-serif;
 $nav-link-color: black;
 $btn-font-wheight: 600;
 $nav-link-f-wheight: 300;
 $text-regular-wheight: 400;
 
 
-*body{
+*body {
     margin: 0;
     padding-top: 0;
     box-sizing: border-box;
-    font-family: $font-montserrat;  
+    font-family: $font-montserrat;
     font-size: 1em;
 }
-.main-landing{
+
+.main-landing {
     display: flex;
     flex-direction: column;
     height: 100vh;
     align-items: center;
     justify-content: center;
-    
+
 }
 
 
@@ -29,64 +30,76 @@ $text-regular-wheight: 400;
 
 /*---Main buttons && Links ---*/
 
-.main-btn{
+.main-btn {
     text-decoration: none;
     color: $text-btn-color;
     background-color: $main-btn-color;
     border-radius: 3px;
     padding: 10px 40px 10px 40px;
-    font-weight:$btn-font-wheight;
+    font-weight: $btn-font-wheight;
 
 }
 
-.nav-link{
+.see-more-btn {
+
+    font-weight: bold;
+    font-family: $font-montserrat;
+    background-color: white;
+    border: none;
+}
+
+.nav-link {
     text-decoration: none;
     list-style: none;
-    color:$nav-link-color;
-    font-weight:$nav-link-f-wheight;
+    color: $nav-link-color;
+    font-weight: $nav-link-f-wheight;
 
 }
 
-.logo{
+.logo {
     font-weight: $btn-font-wheight;
 }
 
 /*---Padding 1em---*/
 
-.p-1{
+.p-1 {
     padding: 1em;
 }
-.pb-1{
-    padding-bottom:  1em;
-  }
-  .pt-1{
-    padding-top: 1em;
-  }
 
-  .aling-center{
+.pb-1 {
+    padding-bottom: 1em;
+}
+
+.pt-1 {
+    padding-top: 1em;
+}
+
+.aling-center {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
 
 
 /*---Nav---*/
 
-.top-nav-container{
+.top-nav-container {
     height: 60px;
-    padding-left: 1em ;
+    padding-left: 1em;
     display: flex;
     align-items: center;
 }
-.ul-nav{
+
+.ul-nav {
     width: 100%;
-    display: flex ;
+    display: flex;
     justify-content: center;
     gap: 20px;
-    
+
 }
-@media (max-width: 570px){
-    .ul-nav{
+
+@media (max-width: 570px) {
+    .ul-nav {
         display: none;
     }
 }
@@ -96,62 +109,67 @@ $text-regular-wheight: 400;
 
 /*---TITLES---*/
 
-.h1-landing{
+.h1-landing {
     margin: 0;
     padding-bottom: 0.7em;
 }
 
-.h3-text{
+.h3-text {
     font-weight: bold;
     font-size: 0.7em;
     padding-top: 40px;
 }
 
-.h3-service{
+.h3-service {
     font-weight: bold;
-    font-size: 0.7em;
-    
-  }
-  .orange{
+    font-size: 1em;
+    color: $detail-color;
+
+}
+
+.orange {
     font-size: 2em;
-    color:$detail-color
-  }
+    color: $detail-color
+}
+
+.h4-services {
+    max-width: 250px;
+    color: $main-btn-color;
+}
 
 /*---- P- Text style---*/
 
-.text{
-    font-weight:$text-regular-wheight;
+.text {
+    font-weight: $text-regular-wheight;
 }
 
-p{
+p {
     max-width: 250px;
 }
 
 /*--- Landing text---*/
 
-.text-landing-media{
+.text-landing-media {
     max-width: 400px;
     font-weight: 600;
 }
 
-.h3-landing{
-    
+.h3-landing {
+
     font-weight: 900;
 }
 
-.background-landing{
 
-}
 
 
 /*---Landing blur section---*/
 
-.landing-blur-container{
+.landing-blur-container {
     width: 100%;
     height: 90px;
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-around;
+    justify-content: space-around;
 }
 
 /*.blur-orange{
@@ -177,35 +195,140 @@ p{
 }*/
 
 
-.arrow{
+.arrow {
     width: 50%;
     position: absolute;
     left: 4px;
     margin-top: 40px;
-    
+
 }
-.h3-blur{
+
+.h3-blur {
     padding-top: 0;
 }
 
 /*--- Services---*/
+.service {
+    width: 282px;
+    height: 291;
+}
 
-.services-main-container{
+.services-main-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
 }
 
+.color-title {
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #143BB2;
+}
+
+
+
+/*js-services*/
+
+.text-expanded {
+
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+
+
+}
+
+.text-open {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+
+
+}
+
+.text-align-services {
+    position: absolute;
+    padding-top: 20px;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100vw;
+
+}
+
+.roto {
+    padding-right: 3em;
+}
+
+@media (max-width: 845px) {
+    .text-expanded {
+        
+        opacity: 1;
+        transition: none;
+        display: none;
+    }
+    .text-open{
+        
+    
+        display: flex;
+       
+    }
+    .text-align-services {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        padding: 1em;
+        
+    }
+    .roto{
+        padding-right: 0em;
+    }
+
+    .service {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: auto;
+    }
+}
+
+/*--- Service colors---*/
+
+.c-1 {
+    border-top: 10px solid #F9FE00;
+}
+
+.c-2 {
+    border-top: 10px solid #00FFB1;
+}
+
+.c-3 {
+    border-top: 10px solid #FF0099;
+}
+
+.c-4 {
+    border-top: 10px solid $main-btn-color;
+}
+
 /*--- Team --- */
-.team{
+.team {
     height: auto;
     display: flex;
     flex-direction: column;
-    gap:20px;
+    gap: 20px;
 }
 
-.team-cards{
+.team-cards {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -213,38 +336,39 @@ p{
     gap: 1em;
 }
 
-.card{
- 
+.card {
+
     border-radius: 3px;
     max-width: 300px;
     display: flex;
     flex-direction: column;
 }
 
-.img-container{
+.img-container {
     background-color: #F97135;
     border-radius: 3px;
     width: 100%;
     height: 200px;
 
-    
-    
+
+
 }
-.ira{
+
+.ira {
     background-image: url(/images/ira-removebg-preview.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.masha{
+.masha {
     background-image: url(/images/Masha-removebg-preview.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.sergi{
+.sergi {
     background-image: url(/images/IMG_8168-removebg-preview.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -253,84 +377,88 @@ p{
 
 /*---WHY US SECTION---*/
 
-.why-main{
+.why-main {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10%;
-    
+
 }
 
-.why-us{
-    display: flex;
-    align-items: center;
-    justify-content:center;
-}
-
-.why-p{
-    display: flex;
-    justify-content: flex-start;
-   
-    gap:15px;
-    align-items: flex-start;
-} 
-.why-title{
+.why-us {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+.why-p {
+    display: flex;
+    justify-content: flex-start;
+
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.why-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @media (max-width:690px) {
 
-    .why-main{
+    .why-main {
         flex-direction: column;
     }
-    
+
 }
 
 
 
 
 
-    
+
 
 
 
 
 /*---Input Form---*/
-.form-container{
-  
-   
+.form-container {
+
+
     border-radius: 3px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    
-    
-    
+
+
+
 }
-label{
+
+label {
     display: flex;
     flex-direction: column;
 }
 
-.input-form{
-   background:none;
+.input-form {
+    background: none;
     border: none;
     border-bottom: 1px $main-btn-color solid;
     outline: none;
-    
+
 }
 
-.message{
-    border:  1px $main-btn-color solid;
+.message {
+    border: 1px $main-btn-color solid;
     border-radius: 3px;
     height: 50px;
     font-family: $font-montserrat;
-    
+
 }
-.sumbit{
+
+.sumbit {
     border: none;
     font-family: $font-montserrat;
 }
@@ -340,25 +468,24 @@ label{
 @media (min-width: 570px) {
 
 
-  
-    .text-landing-media{
+
+    .text-landing-media {
         max-width: 600px;
     }
-    
-       
+
+
+}
+
+
+
+
+
+@media (min-width: 970px) {
+    .services-main-container {
+        height: 100vh;
     }
-    
-    
-    
-    
 
-    @media (min-width: 875px){
-        .services-main-container{
-            height: 100vh;
-        }
-
-        .team{
-            height: 100vh;
-        }
-    } 
-    
+    .team {
+        height: 100vh;
+    }
+}
